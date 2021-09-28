@@ -4,6 +4,7 @@ import axios from "axios";
 
 import { Header } from "./components/Header";
 import { UserCard } from "./components/UserCard";
+import { FollowersList } from "./components/FollowersList";
 
 //make APP a class based component
 export default class App extends Component {
@@ -33,18 +34,18 @@ export default class App extends Component {
       .catch(err => {
         console.log(err.message);
       });
-    //fetch data from the github API for my FOLLOWERS DATA
-    // axios
-    //   .get(`https://api.github.com/users/${this.state.username}/followers`)
-    //   .then(res => {
-    //     console.log(res.data);
-    //     this.setState({
-    //       followersData: res.data
-    //     });
-    //   })
-    //   .catch(err => {
-    //     console.log(err.message);
-    //   });
+    // fetch data from the github API for my FOLLOWERS DATA
+    axios
+      .get(`https://api.github.com/users/${this.state.username}/followers`)
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          followersData: res.data
+        });
+      })
+      .catch(err => {
+        console.log(err.message);
+      });
   }
   // handleSubmit = e => {
   //   e.preventDefault();
@@ -80,6 +81,7 @@ export default class App extends Component {
         <Header />
         <div className="main_container">
           <UserCard userData={this.state.userData} />
+          <FollowersList followersData={this.state.followersData} />
         </div>
       </div>
     );
