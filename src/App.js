@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 
+import { Header } from "./components/Header";
 import { UserCard } from "./components/UserCard";
 
 //make APP a class based component
@@ -76,7 +77,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserCard userData={this.state.userData} />
+        <Header />
+        <div className="main_container">
+          <UserCard userData={this.state.userData} />
+        </div>
       </div>
     );
   }
