@@ -1,5 +1,7 @@
-.follower_image {
-  height: 50px;
-  width: 100%;
-  object-fit: contain;
+.follower {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 0 auto;
 }

@@ -12,14 +12,17 @@ export const UserCard = props => {
     login
   } = props.userData;
   return (
-    <div className="user_card">
-      <img className="user_img" src={avatar_url} alt="user avatar" />
-      <h2>Name: {name}</h2>
-      <p>Bio: {bio}</p>
-      <p>Location: {location}</p>
-      <p>Login: {login}</p>
-      <p>Following: {following}</p>
-      <p>Followers: {followers}</p>
-    </div>
+    <>
+      <h2>Current User</h2>
+      <div className="user_card">
+        <img className="user_img" src={avatar_url} alt="user avatar" />
+        <h2>Name: {name}</h2>
+        <p>Bio: {bio}</p>
+        <p>Location: {location}</p>
+        <p>Login: {login}</p>
+        <p>Following: {following}</p>
+        <p>Followers: {followers}</p>
+      </div>
+    </>
   );
 };
