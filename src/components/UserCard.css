@@ -1,0 +1,15 @@
+.user_card {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.user_img {
+  height: 250px;
+  object-fit: contain;
+}

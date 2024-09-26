@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.header_navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.header_image {
+  height: 70px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.small {
+  height: 35px;
+}
+div span {
+  color: dodgerblue;
+  cursor: pointer;
+  transition: 250ms all ease-in;
+}
+div span:hover {
+  color: darkblue;
+}
